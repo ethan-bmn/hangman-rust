@@ -11,7 +11,7 @@ fn main() {
     word = word.trim();
     println!("Guess the word!");
     let mut guessed_chars: Vec<char> = Vec::new();
-    let mut buff : String = String::from_utf8(vec![b'#';word.len()])?;
+    let mut buff : String = String::from_utf8(vec![b'#';word.len()]).unwrap();
     println!("{}", buff);
     loop {
         if attempts == 0 {
